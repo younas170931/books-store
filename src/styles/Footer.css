@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  background-color: #111111;
+  color: white;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+@media screen and (max-width: 786px) {
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-left {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}

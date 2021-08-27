@@ -1,0 +1,25 @@
+.antd-header {
+  background: #ffffff !important;
+  overflow: hidden;
+}
+
+.antd-header .ant-menu-item {
+  font-size: 16px;
+  text-align: center;
+}
+
+.menu-icon {
+  cursor: pointer;
+  margin-left: 12px;
+  font-size: 17px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .antd-header {
+    padding: 0 15px !important;
+  }
+  .menu-icon {
+    display: block;
+  }
+}

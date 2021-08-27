@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: "Quicksand", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  color: #464646;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+svg {
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utils Start */
+.containerC {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 12px;
+}
+
+.containerC-sm {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 25px 12px;
+}
+
+.containerC-md {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px 12px;
+}
+
+.inputC {
+  padding: 15px 12px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.rounded-4 {
+  border-radius: 10px;
+}
+
+.c-bg-primary {
+  background-color: #32b5f3;
+}
+
+.c-color-primary {
+  color: #32b5f3;
+}
+
+img {
+  width: 100%;
+}
+
+.z-index-5 {
+  z-index: 50 !important;
+}
+.width-full {
+  width: 100% !important;
+}
+
+.site-logo {
+  margin-right: 45px;
+}
+
+.logo {
+  width: 160px;
+}
+
+@media screen and (max-width: 786px) {
+  .logo {
+    width: 135px;
+  }
+}
+
+.mt-header {
+  margin-top: 65px !important;
+}
+
+/* Utils End */
+
+.ant-input-number {
+  width: 100%;
+  padding: 11px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+.ant-select-selector {
+  border: none !important;
+}
+
+.ant-select.ant-select-single {
+  width: 100%;
+  padding: 11px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: white;
+  border: 1px solid #d9d9d9;
+}
+
+.slides {
+  position: relative;
+  margin-left: -8px;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.slides .slick-prev {
+  left: 5%;
+}
+
+.slides .slick-next {
+  right: 5%;
+}
+
+.list__item {
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .containerC {
+    padding: 25px;
+  }
+}
