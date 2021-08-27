@@ -32,8 +32,9 @@ function Cart({
   };
 
   const handleCartCalc = () => {
+    const cartItems = cart?.items || [];
     let subtotal = 0;
-    cart.items.forEach((item) => {
+    cartItems.forEach((item) => {
       subtotal += item.price * item.quantity;
     });
     return {
