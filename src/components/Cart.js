@@ -52,7 +52,7 @@ function Cart({
 
   const { subtotal, total } = handleCartCalc();
 
-  if (!cart.items.length) {
+  if (!cart?.items?.length) {
     return (
       <div className="text-center mt-4">
         <Icon name="ShoppingOutlined" className="fs-1 mb-2" />
