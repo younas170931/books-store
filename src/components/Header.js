@@ -31,8 +31,9 @@ function HeaderMain({ auth, cart, logout }) {
   };
 
   const cartItemsCount = () => {
+    const cartItems = cart?.items || [];
     let count = 0;
-    cart.items.forEach((item) => {
+    cartItems.forEach((item) => {
       count += item.quantity;
     });
     return count;
