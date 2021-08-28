@@ -82,11 +82,11 @@ function Cart({
       <div className="mt-3 mb-3 bg-white p-2 rounded-3">
         <div className="d-flex justify-content-between pt-2 pb-2 mb-3 border-bottom">
           <div>Subtotal</div>
-          <div>${subtotal}</div>
+          <div>${Number.parseFloat(subtotal).toFixed(2)}</div>
         </div>
         <div className="d-flex justify-content-between">
           <h6>Total</h6>
-          <h6>${total}</h6>
+          <h6>${Number.parseFloat(total).toFixed(2)}</h6>
         </div>
       </div>
 
