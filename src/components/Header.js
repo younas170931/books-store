@@ -172,7 +172,10 @@ function HeaderMain({ auth, cart, logout }) {
           if (route.protect.role.includes("unAuth")) {
             if (!user.role) {
               return (
-                <Item key={route.path}>
+                <Item
+                  key={route.path}
+                  style={{ padding: "0px 16px", textAlign: "center" }}
+                >
                   <Link to={route.path}>{route.title}</Link>
                 </Item>
               );
@@ -182,7 +185,10 @@ function HeaderMain({ auth, cart, logout }) {
           // route for authencated users based on thier role
           if (route.protect.role.includes(user.role)) {
             return (
-              <Item key={route.path}>
+              <Item
+                key={route.path}
+                style={{ padding: "0px 16px", textAlign: "center" }}
+              >
                 <Link to={route.path}>{route.title}</Link>
               </Item>
             );
@@ -190,7 +196,10 @@ function HeaderMain({ auth, cart, logout }) {
           return null;
         }
         return (
-          <Item key={route.path}>
+          <Item
+            key={route.path}
+            style={{ padding: "0px 16px", textAlign: "center" }}
+          >
             <Link to={route.path}>{route.title}</Link>
           </Item>
         );

@@ -26,7 +26,7 @@ const styles = {
   },
   content: {
     minHeight: "100vh",
-    padding: "15px 50px",
+    padding: "15px 12px",
     marginTop: 64,
     marginLeft: 200,
   },
