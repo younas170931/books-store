@@ -15,6 +15,7 @@ function Books({
   initialLoading,
   pagination,
   addToCart,
+  cart,
 }) {
   const location = useLocation();
 
@@ -89,6 +90,7 @@ const mapStateToProps = (state) => {
     loading: state.books.loading,
     initialLoading: state.books.initialLoading,
     pagination: state.books.pagination,
+    cart: state.cart,
   };
 };
 

@@ -7,6 +7,17 @@
 .hero__content {
   width: 100%;
   top: 53% !important;
+  padding: 12px;
+}
+
+.hero__title {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.hero__subtitle {
+  font-size: 16px;
 }
 
 .hero img {
@@ -45,11 +56,24 @@
 
 @media screen and (max-width: 600px) {
   .hero {
-    height: 380px;
+    height: 60vh;
+  }
+
+  .hero__title {
+    margin-bottom: 4px;
+    font-size: 24px;
+  }
+
+  .hero__subtitle {
+    font-size: 14px;
   }
 
   .hero__search {
     width: 100%;
+  }
+
+  .hero img {
+    width: 150%;
   }
 
   .hero__search input {

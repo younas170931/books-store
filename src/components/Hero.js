@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <div className="hero position-relative">
       <img src={bannerImg} alt="E-Book" />
-      <div className="hero__content position-absolute start-50 translate-middle text-center p-4">
+      <div className="hero__content position-absolute start-50 translate-middle text-center">
         <div className="hero__search d-flex">
           <input
             placeholder="Search"
@@ -31,10 +31,10 @@ export default function Hero() {
             <Icon name="SearchOutlined" style={{ fontSize: 24 }} />
           </div>
         </div>
-        <h3 className="text-light mt-4 mb-3 fw-normal">
+        <h3 className="hero__title text-light fw-normal">
           Enjoy Your Life, Start Your Journey With Books
         </h3>
-        <small className="text-light">
+        <small className="text-light hero__subtitle">
           The only E-Book marketplace that offers 88% revenue to it's seller
         </small>
         <br />

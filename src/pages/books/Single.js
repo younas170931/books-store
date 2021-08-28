@@ -8,7 +8,7 @@ import * as cartActions from "../../store/cart";
 import "../../styles/Single.css";
 import { Slider, Icon } from "../../components";
 
-function Single({ initialLoading, loadBook, book, addToCart }) {
+function Single({ initialLoading, loadBook, book, addToCart, cart }) {
   const params = useParams();
   const history = useHistory();
 
@@ -100,7 +100,7 @@ function Single({ initialLoading, loadBook, book, addToCart }) {
             </div>
           )}
 
-          <div className="d-flex mt-4">
+          <div className="d-flex mt-4 single__cta">
             <Button
               type="primary"
               shape="round"
@@ -129,6 +129,7 @@ const mapStateToProps = (state) => {
   return {
     book: state.books.book,
     initialLoading: state.books.initialLoading,
+    cart: state.cart,
   };
 };
 

@@ -14,7 +14,9 @@ export default function Card({ item, onAddToCart }) {
       </Link>
       <div className="cardC__content">
         <Link to={`/books/${item._id}`}>
-          <h2 className="cardC__title">{item.title}</h2>
+          <h2 className="cardC__title">
+            {item.title?.toString().substr(0, 56)}
+          </h2>
         </Link>
 
         <div className="cardC__cta">

@@ -64,13 +64,13 @@ function Cart({
 
   return (
     <div className="mt-2 p-2">
-      {cart.items.map((book) => (
+      {cart?.items.map((book) => (
         <CartItem
           key={book._id}
           title={book.title}
           price={book.price}
           quantity={book.quantity}
-          thumbnail={book.images[0].url}
+          thumbnail={book?.images[0]?.url}
           onIncrement={handleIncrement(book)}
           onDecrement={handleDecrement(book)}
           onDelete={handleDelete(book)}

@@ -19,7 +19,7 @@ const store = configStore();
 // Set auth state from local storage
 store.dispatch(setAuthData());
 // Set cartitems from local storage
-const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 store.dispatch(booksAdded(cartItems));
 
 ReactDOM.render(
