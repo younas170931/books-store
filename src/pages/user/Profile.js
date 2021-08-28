@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Form, Button, Select, Spin } from "antd";
 import _ from "lodash";
 
+import { provinces } from "../../constants";
 import * as actions from "../../store/auth";
 import { Input } from "../../components";
 
@@ -82,8 +83,11 @@ function Profile({ updateDetails, getDetails, loading, initialLoading, user }) {
 
         <Item name="province" rules={rules.province}>
           <Select placeholder="select your province">
-            <Option value="Khyber PakhtunKhwa">Khyber PakhtunKhwa</Option>
-            <Option value="Islamabad">Islamabad</Option>
+            {provinces.map((province) => (
+              <Option value={province.value} key={province.label}>
+                {province.label}
+              </Option>
+            ))}
           </Select>
         </Item>
         <Button

@@ -6,7 +6,7 @@ import * as actions from "../store/auth";
 import { Input } from "../components";
 import { Redirect } from "react-router-dom";
 
-const initialValues = { email: "murtaza@gmail.com", password: "password" };
+const initialValues = { email: "", password: "" };
 
 const rules = {
   email: [
@@ -49,7 +49,7 @@ function Login({ login, loading, user, redirect, history }) {
           type="password"
           name="password"
           rules={rules.password}
-          placeholder="Email"
+          placeholder="Password"
         />
 
         <Button

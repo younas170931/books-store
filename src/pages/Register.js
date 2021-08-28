@@ -4,6 +4,7 @@ import { Redirect } from "react-router-dom";
 import { Form, Button, Select } from "antd";
 import _ from "lodash";
 
+import { provinces } from "../constants";
 import * as actions from "../store/auth";
 import { Input } from "../components";
 
@@ -11,14 +12,14 @@ const { Item } = Form;
 const { Option } = Select;
 
 const initialValues = {
-  name: "Murtaza Ahmad",
-  email: "murtaza@gmail.com",
-  password: "password",
-  confirmPassword: "password",
-  address: "Hayatabad Phase 7",
-  city: "Peshawar",
-  province: "Khyber PakhtunKhwa",
-  phoneNo: "0300012345",
+  name: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+  address: "",
+  city: "",
+  province: "",
+  phoneNo: "",
 };
 
 const rules = getRules();
@@ -65,7 +66,7 @@ function Register({ register, loading, user, redirect, ...props }) {
               type="password"
               name="confirmPassword"
               rules={rules.confirmPassword}
-              placeholder="Password"
+              placeholder="Confirm Password"
             />
           </div>
         </div>
@@ -83,10 +84,14 @@ function Register({ register, loading, user, redirect, ...props }) {
           </div>
         </div>
 
+        <p>Province*</p>
         <Item name="province" rules={rules.province}>
-          <Select placeholder="select your province" className="inputC">
-            <Option value="Khyber PakhtunKhwa">Khyber PakhtunKhwa</Option>
-            <Option value="Islamabad">Islamabad</Option>
+          <Select className="inputC">
+            {provinces.map((province) => (
+              <Option value={province.value} key={province.label}>
+                {province.label}
+              </Option>
+            ))}
           </Select>
         </Item>
         <Button
