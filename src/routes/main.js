@@ -99,6 +99,10 @@ const routes = [
     title: "Checkout",
     path: "/checkout",
     Component: Checkout,
+    protect: {
+      role: ["user", "seller", "admin"],
+      redirect: "/login",
+    },
   },
   {
     title: "Order",
