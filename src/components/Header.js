@@ -127,7 +127,7 @@ function HeaderMain({ auth, cart, logout }) {
           className="p-2 fs-5 cursor"
           onClick={() => setDrawerVisible(false)}
         />
-        <Cart />
+        <Cart onCloseDrawer={() => setDrawerVisible(false)} />
       </Drawer>
 
       <Sider

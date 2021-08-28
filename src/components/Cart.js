@@ -16,6 +16,7 @@ function Cart({
   checkout,
   onCheckout,
   loading,
+  onCloseDrawer,
 }) {
   const history = useHistory();
 
@@ -45,6 +46,7 @@ function Cart({
 
   const handleCheckout = () => {
     if (!checkout) {
+      onCloseDrawer();
       return history.push(link);
     }
     onCheckout();
