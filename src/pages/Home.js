@@ -23,7 +23,9 @@ function Home({ categories, loading, loadCategories }) {
           className="col-sm-6 col-xs-12 col-md-4 col-lg-3"
           key={categories[i]._id}
         >
-          <Category category={categories[i]} />
+          <Link to={"/books?category[eq]=" + categories[i]._id}>
+            <Category category={categories[i]} />
+          </Link>
         </div>
       );
     }
