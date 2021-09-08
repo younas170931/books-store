@@ -39,10 +39,17 @@ function Revenue({ loading, getBalance, getLoginLink, balance, loginLink }) {
           <h4>
             Pending balance
             <span className="float-end">
-              ${calculatePendingAmount(balance?.pending)}
+              ${calculateAmount(balance?.pending)}
             </span>
           </h4>
           <small>For last 48 hours</small>
+          <hr />
+          <h4>
+            Available balance
+            <span className="float-end">
+              ${calculateAmount(balance?.available)}
+            </span>
+          </h4>
           <hr />
           <h4>
             Payouts
@@ -60,9 +67,9 @@ function Revenue({ loading, getBalance, getLoginLink, balance, loginLink }) {
   );
 }
 
-function calculatePendingAmount(pendingBalance = []) {
+function calculateAmount(balance = []) {
   let amount = 0;
-  pendingBalance.forEach((i) => {
+  balance.forEach((i) => {
     amount += i.amount / 100;
   });
 

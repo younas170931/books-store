@@ -40,7 +40,7 @@ function OrderList({ orders, loading, loadOrders }) {
             <List.Item.Meta
               avatar={<Avatar src={order.books?.[0].image} />}
               title={order.books[0].title + "...."}
-              description={"$" + order.total}
+              description={"$" + Number.parseFloat(order.total).toFixed(2)}
             />
           </List.Item>
         )}
@@ -75,7 +75,7 @@ function ShowOrderDetails({ order = { books: [] } }) {
       ))}
       <div className="d-flex flex-fill justify-content-between mt-4">
         <h6>Total</h6>
-        <h6>${order.total}</h6>
+        <h6>${Number.parseFloat(order.total).toFixed(2)}</h6>
       </div>
       <div className="d-flex flex-fill justify-content-between mt-2">
         <h6>Payment Status</h6>

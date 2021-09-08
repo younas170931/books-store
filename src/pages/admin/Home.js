@@ -47,8 +47,16 @@ function Home({ loading, loadStatistics, data, balance, getBalance }) {
         <div className="col-md-3 co-sm-12">
           <Card className="rounded-3">
             <Statistic
-              title="Revenue"
-              value={`$${calculatePendingAmount(balance?.pending)}`}
+              title="Pending Balance"
+              value={`$${calculateAmount(balance?.pending)}`}
+            />
+          </Card>
+        </div>
+        <div className="col-md-3 co-sm-12">
+          <Card className="rounded-3">
+            <Statistic
+              title="Available Balance"
+              value={`$${calculateAmount(balance?.available)}`}
             />
           </Card>
         </div>
@@ -57,9 +65,9 @@ function Home({ loading, loadStatistics, data, balance, getBalance }) {
   );
 }
 
-function calculatePendingAmount(pendingBalance = []) {
+function calculateAmount(balance = []) {
   let amount = 0;
-  pendingBalance.forEach((i) => {
+  balance.forEach((i) => {
     amount += i.amount / 100;
   });
 

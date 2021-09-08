@@ -180,7 +180,10 @@ export const updateUserAccountStatus = () => {
 };
 
 export const setAuthData = () => {
-  const token = JSON.parse(localStorage.getItem("token"));
+  let token = localStorage.getItem("token");
+  if (token) {
+    token = JSON.parse(token);
+  }
 
   return (dispatch) => {
     try {
